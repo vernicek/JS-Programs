@@ -179,3 +179,26 @@ function CavitiMap() {
     }
 }
 
+function pascal(paNumberOfRows){
+	var triangular = [[1]];
+	var row ;
+	
+	for(var i = 0 ; i<paNumberOfRows-1; i++){
+		row = [1];
+		for(var j = 1; j<triangular[i].length; j++){
+			
+			var number = triangular[i][j] + triangular[i][j-1];
+			row.push(number);
+		}
+		
+		row.push(1);
+		triangular.push(row);
+	}
+	
+	for(var i = 0 ; i<paNumberOfRows; i++){
+		console.log(triangular[i].toString().replace(/,/g, " "));
+	}
+	
+	return triangular;
+}
+
