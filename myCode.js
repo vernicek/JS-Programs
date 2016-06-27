@@ -3,11 +3,13 @@
  */
 
 function duplicate(array) {
-	var arraznew = array.slice();
-	for(var  i=0; i<array.length;i++){
-		arraznew.push(array[i]);
-	}
-	return arraznew;
+   var arraznew = array.slice();
+   debugger;
+   for(var  i=0; i<array.length;i++){
+      arraznew.push(array[i]);
+      
+   }
+   return arraznew;
 }
 
 function loop() {
@@ -39,32 +41,30 @@ function sum() {
 
 function ranking(array) {
 	var newArray = [];
-	var lastIndex;
 	
-    	for (var i = 0; i < array.length; i++) {
-    		if( i !== 0 && (array[i-1] < array[i])){
+	for (var i = 0; i < array.length; i++) {
+		if( i !== 0 && (array[i-1] < array[i])){
     			newArray.push(i+1);
     		}else{
     			newArray.push(array.indexOf(array[i])+1);
     		}
-    	}
-	return newArray;
+	}
+    	return newArray;
 }
 
 function ranking2(array) {
-    
 	var newArray = [];
 	var lastIndex = 1;
 	
-    for (var i = 0; i < array.length; i++) {
-    	if( i !== 0 && (array[i-1] < array[i])){
-    		newArray.push(i+1);
-    		lastIndex = i+1;
-    	}else{
-    		newArray.push(lastIndex);
+    	for (var i = 0; i < array.length; i++) {
+    		if( i !== 0 && (array[i-1] < array[i])){
+    			newArray.push(i+1);
+    			lastIndex = i+1;
+    		}else{
+    			newArray.push(lastIndex);
+    		}
     	}
-    }
-    return newArray;
+    	return newArray;
 }
 
 function timeTo24(paTime) {
@@ -177,7 +177,5 @@ function CavitiMap() {
         } 
     	console.log(String);   
     }
-    
-
 }
 
