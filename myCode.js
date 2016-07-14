@@ -202,3 +202,39 @@ function pascal(paNumberOfRows){
 	return triangular;
 }
 
+function triagularPlus2(paNumberOfRows){
+	var numberX = 1;
+	var zakladna = paNumberOfRows*2 -1;
+	for(var i = 0 ; i< paNumberOfRows; i++){		
+		var row = "";
+		for(var j = 0 ; j< ((zakladna - numberX) / 2); j++){
+			row = row + " ";
+		}
+		for(var k = 0 ; k< numberX; k++){
+			row = row + "X";
+		}
+		console.log(row);
+		numberX+=2;
+	}
+}
+
+function triagularPlus1(paNumberOfRows){
+	var numberX = 1;
+	var zakladna = paNumberOfRows*2 -1;
+	for(var i = 0 ; i< paNumberOfRows; i++){		
+		var row = "";
+		for(var j = 0 ; j< ((zakladna - numberX) / 2); j++){
+			row = row + " ";
+		}
+		for(var k = 0 ; k< numberX; k++){
+			if(k%2 === 0){
+				row = row + "X";	
+			}else{
+				row = row + " ";	
+			}			
+		}
+		console.log(row);
+		numberX+=2;
+	}
+}
+
